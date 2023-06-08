@@ -20,7 +20,7 @@ class TagController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): TagResource
     {
         $request->validate([
             'name' => 'required',
@@ -31,7 +31,7 @@ class TagController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show($id): TagResource
     {
         return new TagResource(Tag::with(['tasks'])->where('id', $id)->get());
     }
