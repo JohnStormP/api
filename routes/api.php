@@ -1,9 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\TagController;
+use App\Http\Controllers\Api\TaskController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TaskController;
-use App\Http\Controllers\TagController;
 
 
 Route::controller(TaskController::class)->group(function () {
