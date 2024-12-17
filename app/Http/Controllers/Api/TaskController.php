@@ -23,7 +23,7 @@ class TaskController extends Controller
     public function store(Request $request): TaskResource
     {
         $request->validate([
-            'name' => 'required',
+            'name' => ['required','string','max:255'],
             'description' => 'required'
         ]);
         $task = Task::create([
